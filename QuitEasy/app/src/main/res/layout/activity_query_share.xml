@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="Do you want your friends to be able to find and encourage you?"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView5"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:layout_margin="15dp"
+        android:textAlignment="center" />
+
+    <Button
+        android:text="Yes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/yesShareButton"
+        android:layout_margin="10dp"
+        android:textSize="18sp"
+        android:onClick="yesClicked"/>
+
+    <Button
+        android:text="No"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/noShareButton"
+        android:layout_margin="10dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:onClick="noClicked"/>
+</LinearLayout>

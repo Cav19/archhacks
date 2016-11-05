@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="?attr/colorPrimaryDark"
+        android:layout_marginBottom="16dp"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <ImageButton
+            android:id="@+id/btn_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:src="@drawable/profile_icon_clean"
+            android:background="?attr/colorPrimaryDark"
+            style="@style/Widget.AppCompat.ActionButton" />
+
+        <!--</FrameLayout>-->
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:text="Your Friends"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:layout_margin="15dp"
+        tools:text="Your Friends"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textAlignment="center" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="395dp"
+        android:id="@+id/friends_list"
+        android:layout_margin="20dp"
+        android:layout_weight="0.69" />
+
+</LinearLayout>

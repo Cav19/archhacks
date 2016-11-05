@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="Would you like to begin a campaign?"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:layout_margin="15dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textAlignment="center" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/possibleCampaignSpinner"
+        android:layout_margin="10dp"
+        android:entries="@array/possibleCampaigns"/>
+
+    <Button
+        android:text="Continue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:id="@+id/button4"
+        android:onClick="continueClicked"/>
+
+    <Button
+        android:text="Not Now"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:id="@+id/button5"
+        android:onClick="notNowClicked"/>
+</LinearLayout>

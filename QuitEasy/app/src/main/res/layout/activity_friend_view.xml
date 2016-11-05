@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="?attr/colorPrimaryDark"
+        android:layout_marginBottom="16dp"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <ImageButton
+            android:id="@+id/btn_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:src="@drawable/profile_icon_clean"
+            android:background="?attr/colorPrimaryDark"
+            style="@style/Widget.AppCompat.ActionButton" />
+
+
+        <!--</FrameLayout>-->
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:text="null"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/friendName"
+        android:layout_margin="15dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textAlignment="center"
+        android:textSize="36sp" />
+
+    <TextView
+        android:text="Currently Fighting: "
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/campaignString"
+        android:layout_margin="10dp"
+        tools:text="Currently Fighting: "
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="24sp"
+        android:textAlignment="textStart" />
+
+    <TextView
+        android:text="You sent encouragement x days ago"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/encouragementDayCount"
+        android:layout_margin="10dp"
+        tools:text="You sent encouragement x days ago"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="18sp"
+        android:textAlignment="textStart" />
+
+    <TextView
+        android:text="Write some encouragement for:"
+        android:layout_width="267dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/encouragementLabel"
+        android:layout_margin="10dp"
+        tools:text="Write some encouragement for:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="18sp" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:id="@+id/campaignSpinner"
+        android:textAlignment="viewEnd"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:id="@+id/encouragementMessage"
+        android:layout_margin="15dp"
+        android:background="@color/white"
+        android:text=""
+        android:ems="10"
+        android:layout_weight="0.26" />
+
+    <Button
+        android:text="Send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:id="@+id/sendMessageButton"
+        android:onClick="sendMessage" />
+
+</LinearLayout>

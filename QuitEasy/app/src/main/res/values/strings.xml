@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">QuitEasy</string>
+    <string name="quiteasy">QuitEasy</string>
+    <string name="no_location_detected">
+        No location detected. Make sure location is enabled on the device.
+    </string>
 </resources>
