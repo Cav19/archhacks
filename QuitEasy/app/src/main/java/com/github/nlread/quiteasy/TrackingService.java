@@ -2,6 +2,8 @@ package com.github.nlread.quiteasy;
 
 import android.Manifest;
 import android.app.IntentService;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
@@ -9,13 +11,18 @@ import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationManager;
 import android.nfc.Tag;
+import android.os.AsyncTask;
 import android.os.Binder;
 import android.os.Bundle;
 import android.os.IBinder;
+import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.NotificationCompat;
 import android.support.v4.content.ContextCompat;
+import android.util.JsonReader;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -34,11 +41,19 @@ import com.google.android.gms.location.places.PlaceLikelihoodBuffer;
 import com.google.android.gms.location.places.Places;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.text.DateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
 
 /**
  * Created by Benjamin on 11/5/2016.
@@ -164,10 +179,15 @@ public class TrackingService extends Service implements
         LocationServices.FusedLocationApi.removeLocationUpdates(mGoogleApiClient, this);
     }
 
+    private static String token;
+    private static int userId;
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         // We want this service to continue running until it is explicitly
         // stopped, so return sticky.
+        token = intent.getStringExtra("token");
+        userId = intent.getIntExtra("userId", -1);
+
         mRequestingLocationUpdates = false;
         mLastUpdateTime = "";
 
@@ -222,12 +242,173 @@ public class TrackingService extends Service implements
     private static final String PLACES_SEARCH_URL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?";
     private static final String API_KEY = "AIzaSyDl87saL3wB0z4Fvt0_5z_Aku3PuCF8VcI";
     private static final String RADIUS = "1000";
+    private List<Message> dangerZones = new ArrayList<Message>();
 
     public void searchForNearbyPlaces(){
-        Intent searchIntent = new Intent(this, ReadHttp.class);
         String url = (PLACES_SEARCH_URL + "key=" + API_KEY + "&location=" + mCurrentLocation.getLatitude() + "," + mCurrentLocation.getLongitude() + "&radius=" + RADIUS);
-        searchIntent.putExtra("url", url);
-        this.startService(searchIntent);
+        Object[] params = new Object[]{url, this};
+        ReadHttp reader = new ReadHttp();
+        reader.execute(params);
+    }
+
+    /**
+     * Calculates the distance in meters between two lat and long points.
+     * @param lat1
+     * @param lat2
+     * @param lon1
+     * @param lon2
+     * @return
+     */
+    public static double distance(double lat1, double lat2, double lon1, double lon2) {
+
+        final int R = 6371; // Radius of the earth
+
+        Double latDistance = Math.toRadians(lat2 - lat1);
+        Double lonDistance = Math.toRadians(lon2 - lon1);
+        Double a = Math.sin(latDistance / 2) * Math.sin(latDistance / 2)
+                + Math.cos(Math.toRadians(lat1)) * Math.cos(Math.toRadians(lat2))
+                * Math.sin(lonDistance / 2) * Math.sin(lonDistance / 2);
+        Double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+        double distance = R * c * 1000; // convert to meters
+
+        distance = Math.pow(distance, 2);
+
+        return Math.sqrt(distance);
+    }
+
+    public void onReceive(List<Message> messages){
+        dangerZones = messages;
+        checkProximityToDanger();
+    }
+
+    private List<String> flaggedLocations = new ArrayList<String>();
+
+    public void checkProximityToDanger(){
+        for(Message place : dangerZones){
+            Log.d(TAG, place.getData().getString("name"));
+            double dist = distance(mCurrentLocation.getLatitude(), place.getData().getDouble("latitude"), mCurrentLocation.getLongitude(), place.getData().getDouble("longitude"));
+            if(dist <= 1000){
+                Log.d(TAG, "You are close to a point: " + dist);
+                try {
+                    //Thread.sleep(5000);
+                }
+                catch(Exception e){
+                    // Ignore
+                }
+                double newDist = distance(mCurrentLocation.getLatitude(), place.getData().getDouble("latitude"), mCurrentLocation.getLongitude(), place.getData().getDouble("longitude"));
+                if(newDist <= 1000){
+                    if(!flaggedLocations.contains(place.getData().getString("name"))) {
+                        flaggedLocations.add(place.getData().getString("name"));
+                        makeLocationNotification(place.getData().getString("name"));
+                        //makeMessageNotification();
+                        break; //Used for demo to ensure only one notificaiton pops at a time
+                    }
+                }
+            }
+        }
+    }
+
+    public void makeMessageNotification(){
+        try {
+            getMessageFromServer();
+        }
+        catch(Exception e){
+            Log.e("Error occurred", e.getMessage(), e);
+        }
+    }
+
+    public void getMessageFromServer() throws IOException{
+        URL url = new URL(getString(R.string.base_url));
+        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+        conn.setRequestMethod("POST");
+        conn.setDoOutput(true);
+        conn.setDoInput(true);
+        conn.setRequestProperty("Content-Type", "text/json");
+        String body = "{\"function\":\"getMessage\",\"userId\":\""+userId+"\",\"token\":\""+token+"\"}";
+        MessageTask task = new MessageTask();
+        task.execute(new Object[]{conn,body});
+    }
+
+    private class MessageTask extends AsyncTask<Object, Void, HashMap<String,Object>> {
+        @Override
+        protected HashMap<String, Object> doInBackground(Object[] params){
+            HttpURLConnection conn = (HttpURLConnection) params[0];
+            String body = (String)params[1];
+            try {
+                //TODO: getting this to work would be great. I have not been able to test it with the server, but it seems this part below is causing trouble
+                OutputStream out = conn.getOutputStream();
+                Log.d(TAG, "A");
+                BufferedWriter writer = new BufferedWriter(
+                        new OutputStreamWriter(out, "UTF-8"));
+                writer.write(body);
+                writer.flush();
+                writer.close();
+                Log.d(TAG, "B");
+                InputStream in = conn.getInputStream();
+                Log.d(TAG, "C");
+                HashMap<String,Object> loginMap = logInParser(in);
+                return loginMap;
+            }catch(IOException e){
+                System.out.println("IOException");
+            }
+
+            return null;
+        }
+
+        private HashMap<String,Object> logInParser(InputStream in) throws IOException{
+            HashMap<String,Object> map = new HashMap<>();
+            JsonReader reader = new JsonReader(new InputStreamReader(in, "UTF-8"));
+            reader.beginObject();
+            String successful = reader.nextName();//succesful
+            map.put(successful,reader.nextBoolean());
+            String firstName = reader.nextName();//id
+            map.put("firstName", reader.nextString());
+            Log.d(TAG, map.get("firstName").toString());
+            String lastName = reader.nextName();//token
+            map.put("lastName", reader.nextString());
+            String message = reader.nextName();
+            map.put("message", reader.nextString());
+            reader.close();
+
+            return map;
+        }
+
+        @Override
+        protected void onPostExecute(HashMap<String, Object> map){
+            processResults(map);
+        }
+
+    }
+
+    public void processResults(HashMap<String,Object> responseMap){
+        boolean success = (Boolean) responseMap.get("success");
+        if (!success){
+            Log.d("Login", "Error: Not successful");
+            return;
+        }
+        Log.d(TAG, "Success?:" + success);
+        String firstName = (String) responseMap.get("firstName");
+        String lastName = (String) responseMap.get("lastName");
+        String message = (String) responseMap.get("message");
+        NotificationCompat.Builder messageBuilder =
+                new NotificationCompat.Builder(this)
+                .setSmallIcon(R.drawable.notification_img)
+                .setContentTitle("Message from" + firstName + " " + lastName)
+                .setContentText(message);
+        int notificationId = 002;
+        NotificationManager notifyMgr = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        notifyMgr.notify(notificationId, messageBuilder.build());
+    }
+
+    public void makeLocationNotification(String name){
+        NotificationCompat.Builder mbuilder =
+                new NotificationCompat.Builder(this)
+                .setSmallIcon(R.drawable.notification_img)
+                .setContentTitle("Danger Zone!")
+                .setContentText("You're near a place with alcohol: " + name + ". Are you considering drinking?");
+        int notificationId = 001;
+        NotificationManager notifyMgr = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        notifyMgr.notify(notificationId, mbuilder.build());
     }
 
     /**
@@ -238,6 +419,7 @@ public class TrackingService extends Service implements
         mCurrentLocation = location;
         mLastUpdateTime = DateFormat.getTimeInstance().format(new Date());
         Log.d(TAG, "latitude: " + mCurrentLocation.getLatitude() + ", longitude: " + mCurrentLocation.getLongitude());
+        searchForNearbyPlaces();
     }
 
     @Override
