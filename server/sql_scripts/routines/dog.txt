@@ -1,0 +1,17 @@
+login: 
+	input: 
+		username - '<username>'
+		password - '<password>'
+	output: 
+		success - T/F ~ success of login
+		userId - '<id of user IF success>'
+		token - '<token for user IF success>'
+	
+signup:
+	input: 
+		firstName - '<first name of user>'
+		lastName - '<last name of user>'
+		username - '<username of user>'
+		password - '<password of user>'
+	output:
+		
