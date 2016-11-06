@@ -17,32 +17,45 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 /**
  * Created by Connor Valenti on 11/5/2016.
  */
 
-public class ReadHttp extends IntentService {
+public class ReadHttp extends AsyncTask<Object, Void, List<Message>> {
     private static final String TAG = "ReadHttp";
+    private TrackingService service;
 
-    public ReadHttp(){
-        super("ReadHttp");
+    @Override
+    protected List<Message> doInBackground(Object... params){
+        List<Message> dangerousPlaces = new ArrayList<Message>();
+        service = (TrackingService)params[1];
+            try {
+                URL url = new URL(params[0].toString());
+                HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+                List<Message> messages = readJsonStream(urlConnection.getInputStream());
+                dangerousPlaces = getDangerousPlaces(messages);
+            } catch (Exception e) {
+                Log.e("Error occurred", e.getMessage(), e);
+            }
+        return dangerousPlaces;
     }
 
-    public void onHandleIntent(Intent intent){
-        String urlStr = intent.getStringExtra("url");
-        try{
-            URL url = new URL(urlStr);
-            HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
-            List<Message> messages = readJsonStream(urlConnection.getInputStream());
-            for(Message msg : messages){
-                Log.d(TAG, msg.toString());
+    @Override
+    protected void onPostExecute(List<Message> messages){
+        service.onReceive(messages);
+    }
+
+    private List<Message> getDangerousPlaces(List<Message> messages){
+        List<Message> dangerousPlaces = new ArrayList<Message>();
+        for(Message message : messages){
+            if(message.getData().getBoolean("alcohol")){
+                dangerousPlaces.add(message);
             }
         }
-        catch(Exception e){
-            Log.e("Error occurred", e.getMessage(), e);
-        }
+        return dangerousPlaces;
     }
 
     public List<Message> readJsonStream(InputStream in) throws IOException{
@@ -77,20 +90,26 @@ public class ReadHttp extends IntentService {
     public Message readLocation(JsonReader reader) throws IOException{
         boolean hasAlcohol = false;
         boolean isOpen = false;
-        String id = "";
+        String locationName = "";
+        String latitude = "";
+        String longitude = "";
 
         reader.beginObject();
         while(reader.hasNext()){
             String name = reader.nextName();
-            Log.d(TAG, name);
-            if(name.equals("types") && reader.peek() != null){
+            if(name.equals("types")){
                 hasAlcohol = checkForAlcohol(reader);
             }
             else if(name.equals("opening_hours")){
                 isOpen = checkOpen(reader);
             }
-            else if(name.equals("place_id")){
-                id = reader.nextString();
+            else if(name.equals("name")){
+                locationName = reader.nextString();
+            }
+            else if(name.equals("geometry")){
+                String[] location = getLatLong(reader);
+                latitude = location[0];
+                longitude = location[1];
             }
             else{
                 reader.skipValue();
@@ -100,10 +119,41 @@ public class ReadHttp extends IntentService {
         Bundle bundle = new Bundle();
         bundle.putBoolean("alcohol", hasAlcohol);
         bundle.putBoolean("open", isOpen);
-        bundle.putString("id", id);
+        bundle.putString("name", locationName);
+        bundle.putDouble("latitude", Double.valueOf(latitude));
+        bundle.putDouble("longitude", Double.valueOf(longitude));
         Message message = new Message();
         message.setData(bundle);
         return message;
+    }
+
+    public String[] getLatLong(JsonReader reader) throws IOException{
+        String[] location = new String[2];
+        reader.beginObject();
+        while(reader.hasNext()){
+            String text = reader.nextName();
+            if(text.equals("location")){
+                reader.beginObject();
+                while(reader.hasNext()){
+                    String data = reader.nextName();
+                    if(data.equals("lat")){
+                        location[0] = reader.nextString();
+                    }
+                    else if(data.equals("lng")){
+                        location[1] = reader.nextString();
+                    }
+                    else{
+                        reader.skipValue();
+                    }
+                }
+                reader.endObject();
+            }
+            else{
+                reader.skipValue();
+            }
+        }
+        reader.endObject();
+        return location;
     }
 
     public boolean checkForAlcohol(JsonReader reader) throws IOException{
@@ -122,20 +172,18 @@ public class ReadHttp extends IntentService {
     }
 
     public boolean checkOpen(JsonReader reader) throws IOException{
+        boolean openClose = false;
         reader.beginObject();
         while(reader.hasNext()){
             String text = reader.nextName();
             if(text.equals("open_now")){
-                boolean openClose = reader.nextBoolean();
-                if(openClose){
-                    return true;
-                }
+                openClose = reader.nextBoolean();
             }
             else{
                 reader.skipValue();
             }
         }
         reader.endObject();
-        return false;
+        return openClose;
     }
 }
