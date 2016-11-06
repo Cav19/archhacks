@@ -154,7 +154,7 @@ public class HomeActivity extends AppCompatActivity {
                 System.out.println("IOException");
             }
 
-            return null;
+            return new ArrayList<Friend>();
         }
 
         @Override

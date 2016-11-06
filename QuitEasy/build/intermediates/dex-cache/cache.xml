@@ -3,318 +3,318 @@
 
     <item
         is-multidex="false"
-        jar="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="9cf8c0ef60847621c7ad00b4f78dbfc9daba4af2">
-        <dex dex="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-fitness-8.1.0_f9b220ec9ac6de9a4e55ccabe5d8e758d892415b.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Benjamin\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.7\751f548c85fa49f330cecbb1875893f971b33c4e\gson-2.7.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
-        <dex dex="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\gson-2.7_55f5ff86894bbda04a34735480789fb731a66bca.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.2.0\jars\libs\internal_impl-22.2.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="0632f06970823b7e3436f649bfa65b47035c91d0">
-        <dex dex="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0_a5a15b6a31c292c19b02fc325bba4fd093f20b0a.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\jars\libs\internal_impl-23.3.0.jar"
+        jar="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\jars\libs\internal_impl-23.3.0.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.2"
         sha1="4da5a4d697d32497c6f85567a5112e62fdfd0676">
-        <dex dex="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\internal_impl-23.3.0_3909fc5f6ae78247a9c751c22e6f012f097230b2.jar" />
+        <dex dex="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\internal_impl-23.3.0_1f09ad62a32e5a2070c40c6c0ea127b5b692bf45.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="d294caf562c4c678b2ef351662a0ca6f1a4d06c0">
-        <dex dex="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-identity-8.1.0_1902c44f2cc573309cb158e58fddd90bbe4db02c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="82825756edeeb3b56b15e73b2edd56e93da5a444">
-        <dex dex="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-base-8.1.0_de1120e6ba08ce5b851cafa219676ec54ba799f0.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="dcb5b75baf05d92e61d5706737200ee55949f97b">
-        <dex dex="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-gcm-8.1.0_f79b9ed598e6ce81af852223804e830f0027811b.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="d93480da1d303122ee67dc3bc23e6297bdef9951">
-        <dex dex="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-panorama-8.1.0_ab3d800ce10d5bca0dd0c8d7b097719f36cb1a80.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="997773777cf3904c11d6764fe3b7668538220e49">
-        <dex dex="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-ads-8.1.0_709a813a9d02273798e1a158f2180faaac05d183.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="482de223655d06253cc6a4955d653f8994169500">
-        <dex dex="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-measurement-8.1.0_379c4799b6dd97fc13edf8fb3d6ad2bd6b157a4c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="97f3b099801a9ad9d70e835b9125273e986eb68d">
-        <dex dex="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-wearable-8.1.0_8e7d12b7b4f148935ce77106913b0ddea539e175.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="23be6993826b8fd88bbc8d14928bb3b8960d3d4e">
-        <dex dex="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-23.3.0_21fdd0421715983f3bc1627d7593427769056532.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="95758a2905669affbffc5ddd262921d375674fad">
-        <dex dex="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-analytics-8.1.0_141ab23d402f4f847b88959a822cb62508b8df6b.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="d61920aba361832a9545a43fa8c9453eb02f18f7">
-        <dex dex="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-plus-8.1.0_d11394de8c8d1adf072a69c9d5b0d770a52e9441.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="d0dda274b703dd9c5bb056867649d22b4171ae7d">
-        <dex dex="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-basement-8.1.0_decddbb2f1a60325e12de9c9375f796e8ba3c702.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Benjamin\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\retrofit\2.1.0\2de7cd8b95b7021b1d597f049bcb422055119f2c\retrofit-2.1.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="2de7cd8b95b7021b1d597f049bcb422055119f2c">
-        <dex dex="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\retrofit-2.1.0_e22fb577bcb104dfd4beb3221a0e8b4cbc7dc233.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="041d93cf0533591c29d1d7263b2fa114dbfb20bd">
-        <dex dex="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-nearby-8.1.0_32876496353937fdfeca97a5de30ee197ec88f4c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="a0b5d60246cd9d4f3f2443611b3b4c25265840b5">
-        <dex dex="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-23.3.0_d9e506785bddb182bba49473765dbfdc8da36f22.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Benjamin\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.3.0\2b802460eea20f8f2ad9c08c74e0f14718e88aa9\okhttp-3.3.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="2b802460eea20f8f2ad9c08c74e0f14718e88aa9">
-        <dex dex="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\okhttp-3.3.0_e72151313260d2ec0a0b3b209351b1067260168e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="17449c47df35c754b257532052f1270c444f7993">
-        <dex dex="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-vision-8.1.0_5b037aba9ee5a54a77c68973ce99ed9c7fff1e33.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="2a7e47da654546f9457deb6132364f1bf33a1857">
-        <dex dex="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-maps-8.1.0_04fb0a22f2638adc34f4cf295834dd6f7dc34541.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="993834cb17d07d51b92db89d2c330243592ebf77">
-        <dex dex="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-games-8.1.0_905d7cb52dc6a23e38c64e8c5fce287caf3a1c0c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="b92002cb2f0e11a226ac5bac6dff1dc2a9d0b774">
-        <dex dex="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-appinvite-8.1.0_bf0845fe78e680bcfee34b28634430243174ddd4.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.2.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="dcf8c83c3dead00a6c4fe313e95f7aaca20dc641">
-        <dex dex="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.android.support-mediarouter-v7-22.2.0_0aab3a07926cbc396f520ee0196c3274e5c09a24.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\8.1.0\jars\classes.jar"
+        jar="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\8.1.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.2"
         sha1="3b05c18f60969ecc2ba49c0409c4b96be2d9cb0c">
-        <dex dex="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-safetynet-8.1.0_40ab6af534f4170acb82454722d19c0f7eb6d3f8.jar" />
+        <dex dex="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-safetynet-8.1.0_db96401d4c55c103e6638fefd8910cd065b6ef8f.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="4477ea44f5ec5ad064022a22691732d7638ff197">
-        <dex dex="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-appindexing-8.1.0_c219561cf54ca7c93dac088d0562209938cd57c3.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="325788a04b436a0bccbc5b4c54cf0f12ebdcbd2d">
-        <dex dex="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-wallet-8.1.0_92d411e7a026aa3c9a029abbd02fc0db349d4c65.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="3178362320bcf51228835b60ff978efadfd1f783">
-        <dex dex="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-cast-8.1.0_e2849d614ced970f35b6dfad257195d93c86e970.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="3c729e6d76a36c5dc27e6a4c4009296f49eaa88a">
-        <dex dex="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-drive-8.1.0_8ce8a456c58f12d7a09f93d1f34fc987a46228fb.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="8a034dd16c0dfd75fe86c52c2cd581592acc684a">
-        <dex dex="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.3.0_a2e32ad6e725471ac14f8ffd179c59a567de5524.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="1b8e03daaa43fb0a4cd57e378167c2fd70454c1e">
-        <dex dex="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.3.0_0c6777f5d0b65a397849adca81d7f562318edfff.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\8.1.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="3aed37c38c56679602255dd72ef356da5d327cda">
-        <dex dex="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-location-8.1.0_3adeb0984239d257cdb47691089ace733f1daeaf.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Benjamin\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.3.0\support-annotations-23.3.0.jar"
+        jar="C:\Users\Valenti\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.3.0\support-annotations-23.3.0.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.2"
         sha1="db7791d75a07fef9844d06236c1c59ba7bf6997c">
-        <dex dex="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\support-annotations-23.3.0_c95cf56d5c1f52118de0a94161aec2ae902c9f77.jar" />
+        <dex dex="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\support-annotations-23.3.0_00d2362fc528d2289011555e0b7160a393f54975.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Benjamin\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\converter-gson\2.1.0\aa557d71ead91cbf26e0c316a0f593d168303309\converter-gson-2.1.0.jar"
+        jar="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.2"
-        sha1="aa557d71ead91cbf26e0c316a0f593d168303309">
-        <dex dex="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\converter-gson-2.1.0_8f24492a898f7944eb8139e0f452b9d07a4374a1.jar" />
+        sha1="23be6993826b8fd88bbc8d14928bb3b8960d3d4e">
+        <dex dex="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-23.3.0_8872499217ef847af59464392e8392961d05edac.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Benjamin\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.8.0\5ea7af56cc7c567ed9856d99efb30740e9b17ff\okio-1.8.0.jar"
+        jar="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="3c729e6d76a36c5dc27e6a4c4009296f49eaa88a">
+        <dex dex="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-drive-8.1.0_a4871d7b04ee93c2f08a30ea982a7e8691795775.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Valenti\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.3.0\2b802460eea20f8f2ad9c08c74e0f14718e88aa9\okhttp-3.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="2b802460eea20f8f2ad9c08c74e0f14718e88aa9">
+        <dex dex="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\okhttp-3.3.0_c6cff1cf710001a51daaed0dd161e45977bade39.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="d294caf562c4c678b2ef351662a0ca6f1a4d06c0">
+        <dex dex="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-identity-8.1.0_16f64824f887517ac6618f4f64e13cad80757f56.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="a0b5d60246cd9d4f3f2443611b3b4c25265840b5">
+        <dex dex="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-23.3.0_925cab5d90e6b2f1a34e091a665739d3ff432cb6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="d0dda274b703dd9c5bb056867649d22b4171ae7d">
+        <dex dex="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-basement-8.1.0_7a89f93e3f5784d0944db06fd137c8253f7f4e2b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="97f3b099801a9ad9d70e835b9125273e986eb68d">
+        <dex dex="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-wearable-8.1.0_8f160b434acf26f0576bc79619d3742d82fd4c2f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="9cf8c0ef60847621c7ad00b4f78dbfc9daba4af2">
+        <dex dex="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-fitness-8.1.0_38ae0d54ade51efceabff2327bc9a79de31b7f84.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="8a034dd16c0dfd75fe86c52c2cd581592acc684a">
+        <dex dex="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.3.0_cf5c833725f6283b53e05926249b6e2c4c781921.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="dcb5b75baf05d92e61d5706737200ee55949f97b">
+        <dex dex="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-gcm-8.1.0_657df7bdd8c6e32894c31914fc2fd9235df8799d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="993834cb17d07d51b92db89d2c330243592ebf77">
+        <dex dex="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-games-8.1.0_58532f39a278e41c73da705a74907d7e0bbf3f36.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Valenti\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\retrofit\2.1.0\2de7cd8b95b7021b1d597f049bcb422055119f2c\retrofit-2.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="2de7cd8b95b7021b1d597f049bcb422055119f2c">
+        <dex dex="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\retrofit-2.1.0_00ab3dd8a14b36fe8408fe5800bf721cbaa0715e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="95758a2905669affbffc5ddd262921d375674fad">
+        <dex dex="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-analytics-8.1.0_81f0e275f5831581e5ac357024641ee9487a7bab.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="82825756edeeb3b56b15e73b2edd56e93da5a444">
+        <dex dex="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-base-8.1.0_fd6246e12cf0aba548e0ceb4ad2ea31fca401050.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="d61920aba361832a9545a43fa8c9453eb02f18f7">
+        <dex dex="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-plus-8.1.0_3130f6afed74b9fda1af236d9dff3cc1e8deef3e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="041d93cf0533591c29d1d7263b2fa114dbfb20bd">
+        <dex dex="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-nearby-8.1.0_41011242cd8801a8b2d83b3eecadc1e62a02a62b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="1b8e03daaa43fb0a4cd57e378167c2fd70454c1e">
+        <dex dex="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.3.0_1fe5eb71ce3192557ce2a35d0d714a6fb02d2836.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="4477ea44f5ec5ad064022a22691732d7638ff197">
+        <dex dex="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-appindexing-8.1.0_200ed74437e64d748a7ad002755832763c9aa1c2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="997773777cf3904c11d6764fe3b7668538220e49">
+        <dex dex="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-ads-8.1.0_0bca5ed6cbd9954cbc2644252450dd176ec85064.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="325788a04b436a0bccbc5b4c54cf0f12ebdcbd2d">
+        <dex dex="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-wallet-8.1.0_75b2cea11498d2214cd47bf6d7054319299c22cf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="dcf8c83c3dead00a6c4fe313e95f7aaca20dc641">
+        <dex dex="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.android.support-mediarouter-v7-22.2.0_3ae5d46b30d69694ff315c0f100f7e631d35ef17.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="2a7e47da654546f9457deb6132364f1bf33a1857">
+        <dex dex="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-maps-8.1.0_d5ffdd51df82a4b93ad4402150489c739aeba8e6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="d93480da1d303122ee67dc3bc23e6297bdef9951">
+        <dex dex="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-panorama-8.1.0_120487478e9b552e695d7d54977e586134a3f2d4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="3aed37c38c56679602255dd72ef356da5d327cda">
+        <dex dex="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-location-8.1.0_ba4dd0b8a8d48d6c444658b743519727231bbae9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="482de223655d06253cc6a4955d653f8994169500">
+        <dex dex="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-measurement-8.1.0_1ba01b9d5b78a7699e0a9cf9fc91fec0bb3f001c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="3178362320bcf51228835b60ff978efadfd1f783">
+        <dex dex="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-cast-8.1.0_b43d52b0304e19e23cbc65b247fae960c1baa475.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Valenti\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.8.0\5ea7af56cc7c567ed9856d99efb30740e9b17ff\okio-1.8.0.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.2"
         sha1="05ea7af56cc7c567ed9856d99efb30740e9b17ff">
-        <dex dex="C:\Users\Benjamin\Documents\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\okio-1.8.0_03f9c96d334791e05dc0a9a61d2856ed9e43b218.jar" />
+        <dex dex="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\okio-1.8.0_e92e0d3f67a89f6bccdff39066ed20b5461a673c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="b92002cb2f0e11a226ac5bac6dff1dc2a9d0b774">
+        <dex dex="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-appinvite-8.1.0_d352dad32733fe7869df37bacb7321662a38a913.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="17449c47df35c754b257532052f1270c444f7993">
+        <dex dex="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-vision-8.1.0_0d5263920ce06ac6a4b3bf0f440dabeb8a26dc64.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Valenti\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\converter-gson\2.1.0\aa557d71ead91cbf26e0c316a0f593d168303309\converter-gson-2.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="aa557d71ead91cbf26e0c316a0f593d168303309">
+        <dex dex="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\converter-gson-2.1.0_1fc4276a706c33f5e5a7089bed763f3b38c56597.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="0632f06970823b7e3436f649bfa65b47035c91d0">
+        <dex dex="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0_be8009d906c5c3b1f996042b85b978b6926ecc92.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Valenti\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.7\751f548c85fa49f330cecbb1875893f971b33c4e\gson-2.7.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
+        <dex dex="C:\Users\Valenti\testdog\archhacks\QuitEasy\app\build\intermediates\pre-dexed\debug\gson-2.7_805a823ba80a16aa439ce63a58227a76694e4a4a.jar" />
     </item>
 
 </items>
