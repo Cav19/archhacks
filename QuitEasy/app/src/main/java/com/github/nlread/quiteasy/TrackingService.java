@@ -21,10 +21,22 @@ import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.PendingResult;
+import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.location.places.Place;
+import com.google.android.gms.location.places.PlaceDetectionApi;
+import com.google.android.gms.location.places.PlaceFilter;
+import com.google.android.gms.location.places.PlaceLikelihood;
+import com.google.android.gms.location.places.PlaceLikelihoodBuffer;
+import com.google.android.gms.location.places.Places;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.text.DateFormat;
 import java.util.Date;
 
@@ -93,6 +105,8 @@ public class TrackingService extends Service implements
                 .addConnectionCallbacks(this)
                 .addOnConnectionFailedListener(this)
                 .addApi(LocationServices.API)
+                .addApi(Places.GEO_DATA_API)
+                .addApi(Places.PLACE_DETECTION_API)
                 .build();
         createLocationRequest();
     }
@@ -192,6 +206,7 @@ public class TrackingService extends Service implements
             mCurrentLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
             Log.d(TAG, "Initial Pos: " + mCurrentLocation.getLatitude() + ", " + mCurrentLocation.getLongitude());
             mLastUpdateTime = DateFormat.getTimeInstance().format(new Date());
+            searchForNearbyPlaces();
             mRequestingLocationUpdates = true;
         }
 
@@ -202,6 +217,17 @@ public class TrackingService extends Service implements
             Log.d(TAG, "Starting Location Updates");
             startLocationUpdates();
         }
+    }
+
+    private static final String PLACES_SEARCH_URL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?";
+    private static final String API_KEY = "AIzaSyDl87saL3wB0z4Fvt0_5z_Aku3PuCF8VcI";
+    private static final String RADIUS = "1000";
+
+    public void searchForNearbyPlaces(){
+        Intent searchIntent = new Intent(this, ReadHttp.class);
+        String url = (PLACES_SEARCH_URL + "key=" + API_KEY + "&location=" + mCurrentLocation.getLatitude() + "," + mCurrentLocation.getLongitude() + "&radius=" + RADIUS);
+        searchIntent.putExtra("url", url);
+        this.startService(searchIntent);
     }
 
     /**
