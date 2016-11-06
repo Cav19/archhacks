@@ -14,8 +14,14 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
+import java.io.BufferedInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.io.Serializable;
 import java.lang.reflect.Array;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -26,8 +32,10 @@ import java.util.List;
 
 public class HomeActivity extends AppCompatActivity {
 
+    private static final String BASE_URL = "http://www.something.com";
     ArrayList<Friend> friends;
-    private int token;
+    private String token;
+    private int userID;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,11 +43,12 @@ public class HomeActivity extends AppCompatActivity {
         Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(myToolbar);
         Bundle extras = getIntent().getExtras();
-        this.token = (Integer) extras.get("token");
+        this.token = (String) extras.get("token");
+        this.userID = (Integer) extras.get("userID");
 
         ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION},1);
         Intent trackingIntent = new Intent(HomeActivity.this, TrackingService.class);
-        this.startService(trackingIntent);
+        //this.startService(trackingIntent);
 
         friends = new ArrayList<>();
         //Create test data
@@ -49,8 +58,25 @@ public class HomeActivity extends AppCompatActivity {
             Friend newFriend = new Friend("username" + i, new Campaign[] {campaign1, campaign2}, new Date(1478374200000l));
             friends.add(newFriend);
         }
-
+        //real data could be below
+        String urlParams = "request=friendships&token=" + token + "&userID=" + userID;
+        try {
+            URL url = new URL(BASE_URL + "?" + urlParams);
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            InputStream in = new BufferedInputStream(conn.getInputStream());
+            String body = readInput(in);
+        }catch(Exception e){
+            System.out.println("Exception encountered: " + e.getMessage());
+        }
         initTable();
+    }
+
+    private String readInput(InputStream in) throws IOException{
+        String body = "";
+        while(in.available() > 0){
+            body += (char) in.read(); //convert byte to character
+        }
+        return body;
     }
 
     public void friendClicked(View v){
@@ -60,6 +86,7 @@ public class HomeActivity extends AppCompatActivity {
         Intent openFriend = new Intent(HomeActivity.this, FriendViewActivity.class);
         openFriend.putExtra("friend", friendClicked);
         openFriend.putExtra("token", token);
+        openFriend.putExtra("userID", userID);
         startActivity(openFriend);
     }
 
@@ -79,6 +106,7 @@ public class HomeActivity extends AppCompatActivity {
             Friend friend = (Friend) getItem(position);
             Button b = new Button(this.getContext());
             b.setText(friend.username);
+            b.setTextSize(18f);
             View.OnClickListener listener = new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

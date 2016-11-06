@@ -9,6 +9,7 @@
         android:id="@+id/textView6"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textAlignment="center"
+        android:textColor="#000000"
         android:layout_marginTop="21dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
@@ -27,6 +28,7 @@
             android:layout_height="wrap_content"
             android:inputType="time"
             android:ems="10"
+            android:textColor="#000000"
             android:id="@+id/time0"
             android:layout_weight="1"
             android:layout_marginTop="0dp"
@@ -41,6 +43,7 @@
             android:layout_centerVertical="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
+            android:textColor="#000000"
             android:id="@+id/meridian0"
             android:entries="@array/meridian" />
 
