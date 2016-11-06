@@ -46,7 +46,7 @@ public class NewAccountActivity extends AppCompatActivity {
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         conn.setDoOutput(true);
         conn.setRequestMethod("POST");
-        String body = "username="+username+"&password="+password+"&phone_number="+phoneNumberStr;
+        String body = "request=createNewAccount&username="+username+"&password="+password+"&phone_number="+phoneNumberStr;
         conn.setFixedLengthStreamingMode(body.length());
         OutputStream out = new BufferedOutputStream(conn.getOutputStream());
         out.write(body.getBytes());
