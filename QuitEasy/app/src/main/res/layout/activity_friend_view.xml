@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:weightSum="1">
+    android:weightSum="1"
+    android:background="@color/colorPrimary">
 
     <android.support.v7.widget.Toolbar
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -11,7 +12,7 @@
         android:id="@+id/toolbar"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:background="?attr/colorPrimaryDark"
+        android:background="@color/colorPrimaryDark"
         android:layout_marginBottom="16dp"
         app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
@@ -22,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:src="@drawable/profile_icon_clean"
-            android:background="?attr/colorPrimaryDark"
+            android:background="@color/colorPrimaryDark"
             style="@style/Widget.AppCompat.ActionButton" />
 
 
@@ -33,6 +34,7 @@
         android:text="null"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="#000000"
         android:id="@+id/friendName"
         android:layout_margin="15dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
@@ -43,6 +45,7 @@
         android:text="Currently Fighting: "
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="#000000"
         android:id="@+id/campaignString"
         android:layout_margin="10dp"
         tools:text="Currently Fighting: "
@@ -55,6 +58,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/encouragementDayCount"
+        android:textColor="#000000"
         android:layout_margin="10dp"
         tools:text="You sent encouragement x days ago"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -66,6 +70,7 @@
         android:layout_width="267dp"
         android:layout_height="wrap_content"
         android:id="@+id/encouragementLabel"
+        android:textColor="#000000"
         android:layout_margin="10dp"
         tools:text="Write some encouragement for:"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -75,6 +80,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
+        android:textColor="#000000"
         android:id="@+id/campaignSpinner"
         android:textAlignment="viewEnd"/>
 
@@ -83,6 +89,8 @@
         android:layout_height="wrap_content"
         android:inputType="textMultiLine"
         android:id="@+id/encouragementMessage"
+        android:backgroundTint="@color/textBoxGrey"
+        android:textColor="#000000"
         android:layout_margin="15dp"
         android:background="@color/white"
         android:text=""
@@ -92,6 +100,7 @@
     <Button
         android:text="Send"
         android:layout_width="match_parent"
+        android:textColor="#000000"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:id="@+id/sendMessageButton"
