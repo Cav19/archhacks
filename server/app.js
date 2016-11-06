@@ -121,6 +121,7 @@ function handleGetFriends(req, res, data) {
 
     dal.authenticateUser(data['id'], data['token'], function (valid) {
         if(!valid) {
+            console.log("GF unable to authenticate");
             replyUnableToAuthenticate(res);
         } else {
             as_handleGetFriends(req, res, data);
@@ -132,12 +133,14 @@ function handleGetFriends(req, res, data) {
  * Authentication successfull. Now get friends data. 
  */
 function as_handleGetFriends(req, res, data) {
+    console.log(data['id']);
     dal.getFriends(data['id'], function(success, friends) {
         if(!success) {
             replyWithError(res, "Unknown error", "");
             return;
         }
-
+        
+        console.log(friends);
         var friendIds = [];
         for(var i=0; i<friends.length; i++) {
             friendIds.push(friends[i]['id']);
@@ -161,9 +164,11 @@ function as_handleGetFriends(req, res, data) {
                resData['friends'] = friends;
            } else {
                resData['success'] = false;
+               console.log("GF fail4");
                res.statusCode = 400;
            }
            setHeaderJson(res);
+           console.log(JSON.stringify(resData));
            res.end(JSON.stringify(resData));
         });
     });
@@ -222,7 +227,7 @@ function as_handleGetMessage(req, res, data) {
     dal.getMessage(data['id'], function(valid, senderFirstName, senderLastName, message) {
         var resData = {};
         setHeaderJson(res);
-        if(!valid) {
+        if(!valid || senderFirstName == null) {
             resData['success'] = false;
             res.statusCode = 400;
         } else {

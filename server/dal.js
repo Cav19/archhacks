@@ -38,7 +38,7 @@ var getManyCampaignsQuery = "CALL get_all_campaigns('%s')";
 var getMessageQuery = "CALL get_message(%s)";
 
 function authenticateUser(userId, token, callback) {
-    var query = util.format(authenticationQuery, userId, token);
+    var query = util.format(authenticationQuery, mysql.escape(userId), mysql.escape(token));
     conn.query(query, function(error, rows, fields) {
         if(error) {
             console.log("error authenticating user: " + error);
@@ -58,7 +58,7 @@ function login(username, password, callback) {
     var query = util.format(loginQuery, username, password);
     conn.query(query, function(error, rows, fields) {
         if(error) {
-            console.log(error);
+            console.log("login" + error);
             callback(false, undefined, undefined);
             return;
         }
@@ -77,7 +77,7 @@ function login(username, password, callback) {
 function signup(username, password, firstName, lastName) {
     var query = util.format(signupQuery, firstName, lastName, userName, password);
     conn.query(query, function(error, rows, fields) {
-            if(error) {
+            if("DOG" + error) {
 
             }
     });
@@ -87,7 +87,7 @@ function sendMessage(fromId, toId, message, callback) {
     var query = util.format(sendMessageQuery, fromId, toId, message);
     conn.query(query, function(error, rows, fields) {
         if (error) {
-            console.log(error);
+            console.log("send" + error);
             callback(false);
         } else {
             callback(true);
@@ -99,7 +99,7 @@ function getMessage(toId, callback) {
     var query = util.format(getMessageQuery, toId);
     conn.query(query, function(error, rows, fields) {
         if(error) {
-            console.log(error);
+            console.log("getmsg" + error);
             callback(false, undefined, undefined, undefined);
         } else {
             rows = rows[0];
@@ -112,7 +112,7 @@ function getFriends(userId, callback) {
     var query = util.format(getFriendsQuery, userId);
     conn.query(query, function(error, rows, fields) {
         if(error) {
-            console.log(error);
+            console.log("getFriends " + error);
             callback(false, undefined);
         } else {
             rows = rows[0];
@@ -125,6 +125,7 @@ function getFriends(userId, callback) {
                 friend['username'] = rows[i]['username'];
                 friends.push(friend);
             }
+            console.log("got them friends");
             callback(true, friends);
         }
     });
@@ -135,6 +136,7 @@ function getManyCampaigns(userIds, callback) {
     var query = util.format(getManyCampaignsQuery, strList);
     conn.query(query, function(error, rows, fields) {
         if(error) {
+            console.log(error);
             callback(false, undefined);
         } else {
             rows = rows[0];
@@ -146,6 +148,7 @@ function getManyCampaigns(userIds, callback) {
                 campaign['campaignType'] = rows[i]['campaign_type'];
                 campaigns.push(campaign);
             }
+            console.log("cat")
             callback(true, campaigns);
         }
     });
@@ -167,7 +170,7 @@ function getCampaigns(userId, isSelf, callback) {
     }
 
     conn.query(query, function(error, rows, fields) {
-        if(error) {
+        if("getcamp" + error) {
             callback(error, undefined);
         } else {
             var campaigns = [];
